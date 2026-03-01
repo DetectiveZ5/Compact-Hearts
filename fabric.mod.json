@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "compact-hearts",
+  "version": "${version}",
+  "name": "Compact Hearts",
+  "description": "Replaces the vanilla heart HUD with a single compact heart + numeric HP overlay, depending on how many max hearts you have. Recommended for mods that increases your hearts!",
+  "authors": ["DetectiveZ5"],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/DetectiveZ5/Compact_Hearts"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/compact-hearts/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["detectivez5.compacthearts.CompactHearts"],
+    "client": ["detectivez5.compacthearts.CompactHeartsClient"]
+  },
+  "mixins": [
+    "compact-hearts.mixins.json",
+    {
+      "config": "compact-hearts.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.21",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
